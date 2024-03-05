@@ -31,24 +31,31 @@ namespace ADOConsole
 
             }
 
-            conn.Close();
+            
 
             #endregion
 
+            #region SQL komutlarını SQL Server tarafına gönderme
+            // 1. sql komutları yazmak gerekiyor
+            // 2. Bu komuto calıştırmak için de SqlCommand isimli sınıfa ıhtıyac var.
+
+            string vs_SQLCommand = "SELECT EmployeeID,FirstName,LastName,Title FROM Employees";
 
 
+            SqlCommand cmd = new SqlCommand(vs_SQLCommand,conn);
 
+            SqlDataReader reader = cmd.ExecuteReader();
 
+            while (reader.Read()) 
+            {
+                Console.WriteLine(reader[0] + " - " + reader[1] + " " + reader[2] + " - " + reader[3]);
+            }
 
+            reader.Close();
 
+            conn.Close();
 
-
-
-
-
-
-
-
+            #endregion
 
 
 
