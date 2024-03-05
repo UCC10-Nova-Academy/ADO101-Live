@@ -39,7 +39,7 @@ namespace ADOConsole
             // 1. sql komutları yazmak gerekiyor
             // 2. Bu komuto calıştırmak için de SqlCommand isimli sınıfa ıhtıyac var.
 
-            string vs_SQLCommand = "SELECT EmployeeID,FirstName,LastName,Title FROM Employees ORDER BY LastName DESC";
+            string vs_SQLCommand = "SELECT TOP 30 EmployeeID,FirstName,LastName,Title FROM Employees ORDER BY LastName DESC";
 
 
             SqlCommand cmd = new SqlCommand(vs_SQLCommand,conn);
