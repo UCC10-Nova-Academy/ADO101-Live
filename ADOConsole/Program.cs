@@ -39,7 +39,7 @@ namespace ADOConsole
             // 1. sql komutları yazmak gerekiyor
             // 2. Bu komuto calıştırmak için de SqlCommand isimli sınıfa ıhtıyac var.
 
-            string vs_SQLCommand = "SELECT EmployeeID,FirstName,LastName,Title FROM Employees";
+            string vs_SQLCommand = "SELECT EmployeeID,FirstName,LastName,Title FROM Employees ORDER BY LastName DESC";
 
 
             SqlCommand cmd = new SqlCommand(vs_SQLCommand,conn);
@@ -57,6 +57,13 @@ namespace ADOConsole
 
             #endregion
 
+            // Hack01
+            // Customers tablosundan ilk 30 kayıdı CompanyName,ContactName,City olarak City bilgisi azalan sırada olacak sekilde yazdırınız..İsterseniz ayrı bir metotda yapabilirsiniz.
+
+            // Hack02
+            // Hangi siparişi(Orders) hangi Customer vermiştir
+
+
 
 
         }
@@ -65,6 +72,7 @@ namespace ADOConsole
         static void Main(string[] args)
         {
             SelectData();
+
 
             Console.ReadKey();
         }
