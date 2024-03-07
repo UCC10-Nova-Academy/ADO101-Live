@@ -41,6 +41,12 @@
             tboxCity = new TextBox();
             tboxCountry = new TextBox();
             btonExit = new Button();
+            btonNext = new Button();
+            btonNew = new Button();
+            btonGuncelle = new Button();
+            btonInsert = new Button();
+            btonUpdate = new Button();
+            btonDelete = new Button();
             SuspendLayout();
             // 
             // label1
@@ -150,11 +156,74 @@
             btonExit.UseVisualStyleBackColor = true;
             btonExit.Click += btonExit_Click;
             // 
+            // btonNext
+            // 
+            btonNext.Location = new Point(384, 28);
+            btonNext.Name = "btonNext";
+            btonNext.Size = new Size(112, 34);
+            btonNext.TabIndex = 13;
+            btonNext.Text = "Sonraki";
+            btonNext.UseVisualStyleBackColor = true;
+            btonNext.Click += btonNext_Click;
+            // 
+            // btonNew
+            // 
+            btonNew.Location = new Point(384, 71);
+            btonNew.Name = "btonNew";
+            btonNew.Size = new Size(112, 34);
+            btonNew.TabIndex = 14;
+            btonNew.Text = "Yeni";
+            btonNew.UseVisualStyleBackColor = true;
+            btonNew.Click += btonNew_Click;
+            // 
+            // btonGuncelle
+            // 
+            btonGuncelle.Location = new Point(384, 111);
+            btonGuncelle.Name = "btonGuncelle";
+            btonGuncelle.Size = new Size(112, 34);
+            btonGuncelle.TabIndex = 15;
+            btonGuncelle.Text = "Güncelle";
+            btonGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // btonInsert
+            // 
+            btonInsert.Location = new Point(29, 311);
+            btonInsert.Name = "btonInsert";
+            btonInsert.Size = new Size(112, 34);
+            btonInsert.TabIndex = 16;
+            btonInsert.Text = "Insert";
+            btonInsert.UseVisualStyleBackColor = true;
+            btonInsert.Click += btonInsert_Click;
+            // 
+            // btonUpdate
+            // 
+            btonUpdate.Location = new Point(167, 311);
+            btonUpdate.Name = "btonUpdate";
+            btonUpdate.Size = new Size(112, 34);
+            btonUpdate.TabIndex = 17;
+            btonUpdate.Text = "Update";
+            btonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btonDelete
+            // 
+            btonDelete.Location = new Point(295, 311);
+            btonDelete.Name = "btonDelete";
+            btonDelete.Size = new Size(112, 34);
+            btonDelete.TabIndex = 18;
+            btonDelete.Text = "Delete";
+            btonDelete.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(525, 441);
+            Controls.Add(btonDelete);
+            Controls.Add(btonUpdate);
+            Controls.Add(btonInsert);
+            Controls.Add(btonGuncelle);
+            Controls.Add(btonNew);
+            Controls.Add(btonNext);
             Controls.Add(btonExit);
             Controls.Add(tboxCountry);
             Controls.Add(tboxCity);
@@ -170,6 +239,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +259,11 @@
         private TextBox tboxCity;
         private TextBox tboxCountry;
         private Button btonExit;
+        private Button btonNext;
+        private Button btonNew;
+        private Button btonGuncelle;
+        private Button btonInsert;
+        private Button btonUpdate;
+        private Button btonDelete;
     }
 }
