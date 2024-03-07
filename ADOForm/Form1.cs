@@ -6,5 +6,10 @@ namespace ADOForm
         {
             InitializeComponent();
         }
+
+        private void btonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

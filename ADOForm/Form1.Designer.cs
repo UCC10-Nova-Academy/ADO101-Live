@@ -40,6 +40,7 @@
             tboxTitle = new TextBox();
             tboxCity = new TextBox();
             tboxCountry = new TextBox();
+            btonExit = new Button();
             SuspendLayout();
             // 
             // label1
@@ -138,11 +139,23 @@
             tboxCountry.Size = new Size(190, 31);
             tboxCountry.TabIndex = 11;
             // 
+            // btonExit
+            // 
+            btonExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btonExit.Location = new Point(401, 395);
+            btonExit.Name = "btonExit";
+            btonExit.Size = new Size(112, 34);
+            btonExit.TabIndex = 12;
+            btonExit.Text = "Çıkış";
+            btonExit.UseVisualStyleBackColor = true;
+            btonExit.Click += btonExit_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(843, 541);
+            ClientSize = new Size(525, 441);
+            Controls.Add(btonExit);
             Controls.Add(tboxCountry);
             Controls.Add(tboxCity);
             Controls.Add(tboxTitle);
@@ -175,5 +188,6 @@
         private TextBox tboxTitle;
         private TextBox tboxCity;
         private TextBox tboxCountry;
+        private Button btonExit;
     }
 }
